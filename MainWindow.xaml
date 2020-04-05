@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="adwa" Height="278" Width="470" Loaded="Window_Loaded" >
+    <Grid>
+        <DataGrid  x:Name="dg" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridCheckBoxColumn Binding="{Binding Path= Check}"  x:Name="CheckReady" IsReadOnly="False" Header="" Width="10"/>
+                <DataGridTextColumn Binding="{Binding Path=Number}" x:Name="Number" IsReadOnly="True" Header="номер" Width="50"/>
+                <DataGridTextColumn Binding="{Binding Path=Text1}" x:Name="Do" IsReadOnly="False" Header="дело " Width="27"/>
+                <DataGridTextColumn Binding="{Binding Path=Ready}"  x:Name="Ready" IsReadOnly="False" Header="готовность"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+    </Grid>
+</Window>
